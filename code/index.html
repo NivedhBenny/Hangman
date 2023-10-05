@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        var parser,xmlDoc;
+        var text = "<departments><department><title>Computer Science and Engineering</title><hod>Dr. Shilby</hod><year>1985</year></department><department><title>Mechanical Engineering</title><hod>Rajesh</hod><year>1989</year></department></departments>";
+        
+
+        parser= new DOMParser();
+        xmlDoc=parser.parseFromString(text,'text/xml');
+        var deptName=xmlDoc.getElementsByTagName("department")[0].childNodes[0].childNodes[0].nodeValue;
+        var hodName = xmlDoc.getElementsByTagName("department")[0].childNodes[1].childNodes[0].nodeValue;
+        var yearName = xmlDoc.getElementsByTagName("department")[0].childNodes[2].childNodes[0].nodeValue;
+
+        
+        document.getElementById("demo").innerHTML = "My department is "+deptName+" and the head of the department is "+hodName+". the department has been established in "+yearName;
+    </script>
+</body>
+</html>
