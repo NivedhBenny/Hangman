@@ -1,10 +1,6 @@
-document.addEventListener("keydown",function(event){
-    var character = event.key;
-    checkChar(character);
-    showChosen(character);
-});
 var lives=6;
 var choice=0;
+var score=0;
 
 var wordcol=["red","fruit","marvel","logic","shark","snake","sword","eras","june","zebra","cat","swift","castle","forest","globe","piano","rocket","candle","guitar","planet","kite"];
 var word="";
@@ -43,7 +39,11 @@ function initializeAlphas(){
     }
 }
 
-var score=0;
+document.addEventListener("keydown",function(event){
+    var character = event.key;
+    checkChar(character);
+    showChosen(character);
+});
 
 function clearChosenList() {
     var list = document.getElementById("chosen");
@@ -68,12 +68,11 @@ function init(){
     lives=6;
     document.getElementById("tries").innerHTML=lives;
     console.log(word);
-    clearChosenList()
+    clearChosenList();
     choice=0;
     correct=false;
     flag=0;
     document.querySelector(".clue").innerHTML="CLUE <br>-"+Math.floor(wordLen/2)+" points";
-
 }
 
 init();
@@ -84,7 +83,6 @@ function checkChar(char){
     console.log(alphabets[char]);
     if(alphabets[char]==0){
         flag=0;
-        
     }else{
         flag=1;
     }
@@ -101,11 +99,7 @@ function checkChar(char){
         document.querySelector(".message").innerHTML="<h2 style='color: #D36B00;'>CHARACTER ALREADY CHOSEN<h2>";
     }
     else if(correct){
-        
-       
-            document.querySelector(".message").innerHTML="<h2 style='color: green;'>RIGHT CHOICE<h2>";
-    
-        
+        document.querySelector(".message").innerHTML="<h2 style='color: green;'>RIGHT CHOICE<h2>";
     }else{
         lives--;
         alphabets[char]=1;
@@ -167,7 +161,6 @@ function openPopup(text,bodyText,colour,buttonText) {
     var popup = document.getElementById("popup");
     overlay.style.display = "block";
     popup.style.display = "block";
-
 }
 
 function closePopup() {
