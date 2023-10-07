@@ -9,28 +9,28 @@ var choice=0;
 var wordcol=["red","fruit","marvel","logic","shark","snake","sword","eras","june","zebra","cat","swift","castle","forest","globe","piano","rocket","candle","guitar","planet","kite"];
 var word="";
 
-const clues = {
-    "red": "I am a color often associated with love and passion.",
-    "fruit": "I am an edible object that can be sweet or sour.",
-    "marvel": "I am a renowned comic book company.",
-    "logic": "I am the art of reasoning and rational thought, often used to solve complex problems.",
-    "shark": "I am an apex predator of the ocean with multiple rows of sharp teeth.",
-    "snake": "I am a legless animal, some of my kind are venomous, and others are constrictors.",
-    "sword": "I am a weapon often wielded by knights and warriors in combat.",
-    "eras": "I am distinct time periods in history marked by significant events and cultural changes.",
-    "june": "I am the month known for the summer solstice, warm weather, and longer daylight hours.",
-    "zebra": "I am a wild African animal resembling a horse.",
-    "cat": "I am a furry and independent pet known for my agility and sometimes aloof nature.",
-    "swift": "I am quick and agile in movement, often used to describe a bird in flight.",
-    "globe": "I am a three-dimensional representation of the Earth.",
-    "castle": "I am a fortified structure, often with turrets and moats, used for protection in medieval times.",
-    "forest": "I am a densely wooded area with a variety of trees, plants, and wildlife.",
-    "piano": "I am a musical instrument with keys that produce sounds when struck by hammers.",
-    "rocket": "I am a vehicle which propels itself by expelling gas at high speeds.",
-    "candle": "I am a source of illumination, often used for decoration and relaxation.",
-    "guitar": "I am a stringed musical instrument that can be plucked or strummed, used in various music genres.",
-    "planet": "I am a celestial body that orbits a star.",
-    "kite": "I am an object flown in the sky, often with a tail, using the wind's force for elevation."
+const clue = {
+    "red": "A color often associated with love and passion.",
+    "fruit": "Edible objects that can be sweet or sour.",
+    "marvel": "A renowned comic book company.",
+    "logic": "The art of reasoning and rational thought, often used to solve complex problems.",
+    "shark": "An apex predator of the ocean with multiple rows of sharp teeth.",
+    "snake": "A legless animal, some are venomous, and others are constrictors.",
+    "sword": "A weapon often wielded by knights and warriors in combat.",
+    "eras": "Distinct time periods in history marked by significant events and cultural changes.",
+    "june": "The month known for the summer solstice, warm weather, and longer daylight hours.",
+    "zebra": "A wild African animal resembling a horse.",
+    "cat": "A furry and independent pet known for its agility and sometimes aloof nature.",
+    "swift": "Quick and agile in movement, a word often used to describe a bird in flight.",
+    "globe": "A three-dimensional representation of the Earth",
+    "castle": "A fortified structure, often with turrets and moats, used for protection in medieval times.",
+    "forest": "A densely wooded area with a variety of trees, plants, and wildlife.",
+    "piano": "A musical instrument with keys that produce sounds when struck by hammers.",
+    "rocket": "A vehicle which propels itself by expelling gas at high speeds.",
+    "candle": "A source of illumination, often used for decoration and relaxation.",
+    "guitar": "A stringed musical instrument that can be plucked or strummed, used in various music genres.",
+    "planet": "A celestial body that orbits a star.",
+    "kite": "An object flown in the sky, often with a tail, using the wind's force for elevation."
 };
 
 var alphabets ={}
@@ -118,7 +118,7 @@ function checkChar(char){
     switch(lives){
         case 0:
             document.querySelector(".image").setAttribute("src","./images/0.png");
-            openPopup('You Lost!', 'You ran out of lives. The word was ' + word.toUpperCase()+'.\nYour score is '+score, '#B31312','Try Again');
+            openPopup('You Lost!', 'You ran out of chances. The word was ' + word.toUpperCase()+'.\nYour score is '+score, '#B31312','Try Again');
             break;
         case 1:
             document.querySelector(".image").setAttribute("src","./images/1.png");
@@ -181,5 +181,5 @@ function closePopup() {
 var clueFlag=0;
 function displayClue(){
     clueFlag=1;
-    document.querySelector(".clue").innerHTML="<h2 style='color: #FFB000;'>"+clues[word]+"</h2>";
+    document.querySelector(".clue").innerHTML="<h2 style='color: #FFB000;'>"+clue[word]+"</h2>";
 }
