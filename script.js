@@ -113,6 +113,7 @@ function checkChar(char){
         case 0:
             document.querySelector(".image").setAttribute("src","./images/0.png");
             openPopup('You Lost!', 'You ran out of chances. The word was ' + word.toUpperCase()+'.\nYour score is '+score, '#B31312','Try Again');
+            score=0;
             break;
         case 1:
             document.querySelector(".image").setAttribute("src","./images/1.png");
