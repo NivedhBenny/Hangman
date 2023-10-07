@@ -17,7 +17,6 @@
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
     button{
-      /* margin: 10px 0 0 130px; */
       font-size: large;
       border-radius: 10px;
       color: whitesmoke;
@@ -35,18 +34,9 @@
     height: 50px;
     width: 400px;
     line-height: 50px;
-    /* display: flex;
-    justify-content: center; */
+
     }
-    /* .modal-header,
-    .modal-body,
-    .modal-footer {
-        border: none;
-    } */
-    /* .btn-primary {
-      background-color: #2B3467;
-      color: white;
-    } */
+
     </style>
 </head>
 <body style="background-color: #FFFADD;">
@@ -76,34 +66,15 @@
           
         </div>
       </div>
-      <!-- <button onclick="openPopup()">Open Popup</button> -->
 
       <div class="overlay" id="overlay"></div>
       <div class="popup" id="popup" style="color: white; font-size: 17px; font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;">
           <span class="close-button" onclick="closePopup()">&times;</span>
           <h2 class="popup-title">Popup Content</h2>
           <p class="popup-body" style="margin-top: 30px;">This is a simple popup created without Bootstrap.</p>
-          <button  onclick="closePopup()">Play again</button>
+          <button class="popup-button"  onclick="closePopup()">Play again</button>
       </div>
 
-  <!-- <div class="modal" id="myModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content" style="color: white;">
-            <div class="modal-header">
-                <h5 class="modal-title" >Popup Title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" id="playAgainBtn" data-dismiss="modal">
-                  Play Again</button>
-            </div>
-        </div>
-    </div>
-  </div> -->
 
   <script src="script.js" charset="utf-8"></script>
   <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
